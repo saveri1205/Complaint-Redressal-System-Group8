@@ -1,0 +1,37 @@
+tbl_complaints
+	 customerEmail varchar(30) PRIMARY KEY;
+	 pincode varchar(30);
+	 complaint varchar(30);
+	 status varchar(30) = "raised";
+
+tbl_customer
+	customerEmail varchar(30) PRIMARY KEY;
+	 customerPassword varchar(30);
+	 customerName varchar(30);
+	 customerMobile varchar(30);
+	 customerAddress varchar(30);
+	 customerPincode varchar(30);
+
+tbl_engineer_duty
+	 engineerDutyId int PRIMARY KEY;
+	 engineerEmail varchar(30);
+	 ticketId int;
+	 customerEmail varchar(30);
+
+tbl_engineer
+	 engineerEmail varchar(30) PRIMARY KEY;
+	 engineerPassword varchar(30);
+	 engineerName varchar(30);
+
+tbl_feedbacks
+	 feedbackId int PRIMARY KEY;
+	 ticketId int;
+	 customerEmail varchar(30);
+	 feedback varchar(30);
+
+tbl_managers
+	 managerEmail varchar(30) PRIMARY KEY;
+	 managerPassword varchar(30);
+	 managerName varchar(30);
+	 managerPincode varchar(30);
+
